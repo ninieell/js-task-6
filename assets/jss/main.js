@@ -1,21 +1,25 @@
 var button = document.getElementById("button"),
-count1 = 0;
-var count2= 1;
+count = 0;
+var counter= 1;
 button.onclick = function (){
-  if (count1 <=9 && count2 ==1) {
-    count1 += 1;
-    button.innerHTML = "click me here" + " " + count1;
+    
+  if (count<=9 && counter==1) {
+    count += 1;
+    button.innerHTML = "click me here" + " " + count;
   }
-  else if (count1>9 || count2==0) {
-    if (count1 ==0){
-        count2=1;
-        count1 += 1;
-        button.innerHTML = "click me here"  + " " + count1;
+  else if (count>9 || counter==0) {
+
+    if (count==0)
+    {
+        counter=1;
+        count += 1;
+        button.innerHTML = "click me here"  + " " + count;
     }
     else{
-        count2=0;
-        count1 -= 1;
-        button.innerHTML = "click me here" + " " + count2;
-     }
+    counter=0;
+    count -= 1;
+    button.innerHTML = "click me here"  + " " + count;
+    }
   }
+    
 };
